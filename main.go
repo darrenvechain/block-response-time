@@ -17,6 +17,8 @@ var (
 func main() {
 	flag.Parse()
 
+	log.Println(fmt.Sprintf("running block fetch test against %s for %d blocks", *flagNetworkURL, *flagBlocks))
+
 	startBlock := 23_000_000 // using a historic non-cached block for testing
 
 	start := time.Now()
